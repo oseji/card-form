@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Kanit:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/output.css" />
+    <title>Interactive card details form</details></title>
+  </head>
+  <body
+    class="font-kanit bg-gradient-to-r from-violet-900 from-10% to-white to-90%"
+  >
+    <div class="container">
+      <section class="cardSection">
+        <div
+          class="frontCard"
+          style="
+            background-image: url(images/bg-card-front.png);
+            background-size: 384px 208px;
+          "
+        >
+          <img src="images/card-logo.svg" alt="card logo" class="cardLogo" />
+          <p class="displayNumber">0000 0000 0000 0000</p>
+          <div class="expCvc">
+            <p class="displayName">JANE APPLESEED</p>
+            <div class="exp">
+              <p class="displayMonth">00</p>
+              <p>/</p>
+              <p class="displayYear">00</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="backCard"
+          style="
+            background-image: url(images/bg-card-back.png);
+            background-size: 384px 208px;
+          "
+        >
+          <p class="cvc">123</p>
+        </div>
+      </section>
+
+      <section class="formSection">
+        <form class="form">
+          <div class="inputGrp">
+            <label for="name">CARD HOLDER NAME</label>
+            <input type="text" id="name" placeholder="JANE APPLESEED" />
+            <p class="errText close" id="nameErr">Cant' be blank</p>
+          </div>
+          <div class="inputGrp">
+            <label for="cardNumber">CARD NUMBER</label>
+            <input
+              type="number"
+              id="cardNumber"
+              placeholder="0000 0000 0000 0000"
+            />
+            <p class="errText close" id="numCardError">
+              Wrong format,numbers only
+            </p>
+            <p class="errText close" id="numCardShort">
+              Ensure card number is exactly 16 digits
+            </p>
+          </div>
+
+          <div class="inputRow">
+            <div class="inputGrp w-2/3">
+              <label>EXP DATE(MM/YY)</label>
+              <div class="flex flex-row gap-2">
+                <input type="number" placeholder="MM" id="month" />
+                <input type="number" placeholder="YY" id="year" />
+              </div>
+              <p class="errText close" id="expErr">Can't be blank</p>
+              <p class="errText close" id="expShort">Invalid number</p>
+            </div>
+            <div class="inputGrp w-1/3">
+              <label for="cvc">CVC</label>
+              <input type="number" id="cvc" placeholder="eg. 123" />
+              <p class="errText close" id="cvcErr">Can't be blank</p>
+              <p class="errText close" id="cvcShort">Invalid number</p>
+            </div>
+          </div>
+          <button class="submit">Confirm</button>
+        </form>
+      </section>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

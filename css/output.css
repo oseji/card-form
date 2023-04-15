@@ -562,6 +562,10 @@ video {
   width: 66.666667%;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -570,8 +574,12 @@ video {
   gap: 0.5rem;
 }
 
-.bg-gradient-to-r {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
 
 .from-violet-900 {
@@ -795,4 +803,10 @@ label {
   padding-right: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .lg\:bg-gradient-to-r {
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  }
 }
